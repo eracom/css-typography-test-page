@@ -5,12 +5,10 @@
 		<title>Typography</title>
 		<style type="text/css" media="screen">
 
+
 			/* IMPORT FONTS */
 			@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 			@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
-
-			html { font-size: 100%; }
-			/* base default: 1rem = 16 pixels = 12pt = 96dpi */
 
 			/* BODY FONT */
 			body { font-family: 'Source Sans Pro', sans-serif; }
@@ -18,7 +16,14 @@
 			/* TITLES */
 			h1, h2, h3, h4 { font-family: 'Libre Franklin', sans-serif; }
 
+
+
+
 			/* FONT SIZES */
+
+			html { font-size: 100%; }
+			/* base default: 1rem = 16 pixels = 12pt = 96dpi */
+
 			/* <html> font size = 1rem = 16 pixels */
 			    h1 { font-size: 4.0rem; } /* standard default = 2rem = 32px = 24pt */
 			    h2 { font-size: 2.5rem; } /* standard default = 1.5rem = 24px = 18pt */
@@ -27,6 +32,9 @@
 			     p { font-size: 1.0rem; } /* 100% */
 			.small { font-size: 0.8rem; } /* standard default ~= 0.8em = ~13px = ~10pt */
 
+
+
+
 			/* LINE HEIGHT */
 			    h1 { line-height: 1em; }
 			    h2 { line-height: 1em; }
@@ -34,7 +42,17 @@
 			    h4 { line-height: 1em; }
 			     p { line-height: 1.33em; }
 			.small { line-height: 1.5em; }
-			    h2 { margin-top: -0.5em; }
+
+
+			/* MARGINS */
+			h1 { } /* standard default: = h1 { margin-top: 0.67em;  margin-bottom: 0.67em; } */
+			h2 { } /* standard default: = h2 { margin-top: 0.83em;  margin-bottom: 0.83em; } */
+			h3 { } /* standard default: = h3 { margin-top: 1em;     margin-bottom: 1em;    } */
+			h4 { } /* standard default: = h4 { margin-top: 1.33em;  margin-bottom: 1.33em; } */
+			 p { } /* standard default: =  p { margin-top: 1em;     margin-bottom: 1em;    } */
+
+
+
 
 			/* FONT WEIGHTS */
 			h1 { font-weight: 800; }
@@ -45,26 +63,80 @@
 
 
 			/* TYPOGRAPHY */
-			body { text-rendering: optimizeLegibility; }
+
 			h1 { letter-spacing: -0.067rem; }
 			.small { letter-spacing: 0.025em; }
+
+			/* better typography, but can slow down the page…
+			https://css-tricks.com/almanac/properties/t/text-rendering/ 
+			https://developer.mozilla.org/fr/docs/Web/CSS/text-rendering */
+			body { text-rendering: optimizeLegibility; }
+			h1, h2, h3 { text-rendering: geometricPrecision; }
+
+
+
+
+			/* COLORS */
+			/*
+				Blue
+				Hex:	#1F5C99
+				RGB:	31  92  153
+				HSB:	210°  80%  60%
+				CMYK:	93%  68%  13%  1%
+				Lab:	38  -2  -40
+			*/
+			.blue{ color: #1F5C99; }
+
+			/*
+				Light Blue
+				Hex:	#7AA3CC
+				RGB:	122  163  204
+				HSB:	210°  40%  80%
+				CMYK:	53%  27%  6%  0%
+				Lab:	65  -6  -26
+			*/
+			.lightBlue { color: #7AA3CC; }
+
+			/*
+				Orange
+				Hex:	#FF8000
+				RGB:	255  128  0
+				HSB:	30°  100%  100%
+				CMYK:	0%  62%  100%  0%
+				Lab:	68  46  75
+			*/
+			.orange { color: #FF8000; }
+
+			/*
+				Dark Warm Grey
+				Hex:	#2E2D2C
+				RGB:	46  45  44
+				HSB:	30°  15%  18%
+				CMYK:	69%  64%  64%  64%
+				Lab:	18  0  1
+			*/
+			.darkWarmGrey { color: #2E2D2C; }
+
 
 			/* COLOR */
 			body {
 				background-color: #FFF;
-				color: #000;
+				color: #2E2D2C;
 			}
+			h1, h2, h3, h4 { color: #1f5c99;}
 
-			/* PAGE LAYOUT */
-			body {
-				/* At a root font size of 16px
-				   a full 960px page = 60rem.
-				   (960/16=60) */
-				width: 30rem;
-				margin:auto;
+			a:link, a:visited, a:hover, a:active {
+				color: #2E2D2C;
+				text-decoration: none;
+				border-bottom: 1px solid #7AA3CC;
 			}
-			
-			img { width: 100%; }
+			a:link { }
+			a:visited { }
+			a:hover { 
+				background-color: rgba(122, 163, 204, 0.25);
+				border-bottom-color: #FF8000;}
+			a:active { }
+
 
 		</style>
 	</head>
@@ -74,8 +146,88 @@
 		<h2>Bordering on invisible</h2>
 		<h3>Dual scoops on the hood</h3>
 		<h4>A sheriff’s vehicle originally bought at an auction in Tennessee</h4>
-		<p>The car was a boxy late model Ford sedan, white over black, innocuous bordering on invisible, and very fast. It had been a sheriff’s vehicle originally bought at an auction in Tennessee, and further modified for speed. Perry and I listened to the big engine idle, checked the dual scoops on the hood. I had not seen one of those on the road since high school. <i>“You like the car?”</i> Perry asked. <i>“It’s all right,”</i> I said, my eyes ahead. <i>“I’ve never been much of a Ford man.”</i> Perry shifted in his bucket, <i>“You know something about cars? For city cruising, it'll do.”</i> I spent my childhood in Riverdale, New Jersey, thirty miles north from long, narrow Manhattan Island, which sits in the bay, among other islands,</p>
+		<p>The car was a boxy late model Ford sedan, white over black, innocuous bordering on invisible, and very fast. It had been a sheriff’s vehicle originally bought at an auction in Tennessee, and further modified for speed. Perry and I listened to the big engine idle, checked the dual scoops on the hood. I had not seen one of those on the road since high school. <i>“You like the car?”</i> Perry asked. <i>“It’s all right,”</i> I said, my eyes ahead. <i>“I’ve never been much of a Ford man.”</i> Perry shifted in his bucket, <i>“You know something about cars? For city cruising, it'll do.”</i> I spent my childhood in <a href="#">Riverdale, New Jersey</a>, thirty miles north from long, narrow Manhattan Island, which sits in the bay, among other islands,</p>
+		<img src="https://i0.wp.com/film-grab.com/wp-content/uploads/2016/01/39163.jpg">
 		<p class="small">The car was a boxy late model Ford sedan, white over black, innocuous bordering on invisible, and very fast. It had been a sheriff’s vehicle originally bought at an auction in Tennessee, and further modified for speed. Perry and I listened to the big engine idle, checked the dual scoops on the hood. I had not seen one of those on the road since high school. <i>“You like the car?”</i> Perry asked. <i>“It’s all right,”</i> I said, my eyes ahead. <i>“I’ve never been much of a Ford man.”</i> Perry shifted in his bucket, <i>“You know something about cars? For city cruising, it'll do.”</i> I spent my childhood in Riverdale, New Jersey, thirty miles north from long, narrow Manhattan Island, which sits in the bay, among other islands,</p>
+		<h3>Further modified for speed</h3>
+		<p>The car was a boxy late model Ford sedan, white over black, innocuous bordering on invisible, and very fast. It had been a sheriff’s vehicle originally bought at an auction in Tennessee, and further modified for speed. Perry and I listened to the big engine idle, checked the dual scoops on the hood. I had not seen one of those on the road since high school. <i>“You like the car?”</i> Perry asked. <i>“It’s all right,”</i> I said, my eyes ahead. <i>“I’ve never been much of a Ford man.”</i> Perry shifted in his bucket, <i>“You know something about cars? For city cruising, it'll do.”</i> I spent my childhood in Riverdale, New Jersey, thirty miles north from long, narrow Manhattan Island, which sits in the bay, among other islands,</p>
+		<hr>
+		<h4>Colors:</h4>
+
+		<h4 class="blue"><div class="sample">&nbsp;</div>Blue</h4>
+		<table class="blue">
+			<tr>	<td>Hex</td>	<td colspan="4">#1F5C99</td>								</tr>
+			<tr>	<td>RGB</td>	<td>31</td>		<td>92</td>		<td>153</td>				</tr>
+			<tr>	<td>HSB</td>	<td>210°</td>	<td>80%</td>	<td>60%</td>				</tr>
+			<!--
+			<tr>	<td>CMYK</td>	<td>93%</td>	<td>68%</td>	<td>13%</td>	<td>1%</td>	</tr>
+			<tr>	<td>Lab</td>	<td>38</td>		<td>-2</td>		<td>-40</td>				</tr>
+			-->
+		</table>
+
+		<h4 class="lightBlue"><div class="sample">&nbsp;</div>Light Blue</h4>
+		<table class="lightBlue">
+			<tr>	<td>Hex</td>	<td colspan="4">#7AA3CC</td>								</tr>
+			<tr>	<td>RGB</td>	<td>122</td>	<td>163</td>	<td>204</td>				</tr>
+			<tr>	<td>HSB</td>	<td>210°</td>	<td>40%</td>	<td>80%</td>				</tr>
+			<!--
+			<tr>	<td>CMYK</td>	<td>53%</td>	<td>27%</td>	<td>6%</td>		<td>0%</td>	</tr>
+			<tr>	<td>Lab</td>	<td>65</td>		<td>-6</td>		<td>-26</td>				</tr>
+			-->
+		</table>
+
+		<h4 class="orange"><div class="sample">&nbsp;</div>Orange</h4>
+		<table class="orange">
+			<tr>	<td>Hex</td>	<td colspan="4">#FF8000</td>								</tr>
+			<tr>	<td>RGB</td>	<td>255</td>	<td>128</td>	<td>0</td>					</tr>
+			<tr>	<td>HSB</td>	<td>30°</td>	<td>100%</td>	<td>100%</td>				</tr>
+			<!--
+			<tr>	<td>CMYK</td>	<td>0%</td>		<td>62%</td>	<td>100%</td>	<td>0%</td>	</tr>
+			<tr>	<td>Lab</td>	<td>68</td>		<td>46</td>		<td>75</td>				</tr>
+			-->
+		</table>
+
+		<h4 class="darkWarmGrey"><div class="sample">&nbsp;</div>Dark Warm Grey</h4>
+		<table class="darkWarmGrey">
+			<tr>	<td>Hex</td>	<td colspan="4">#2E2D2C</td>									</tr>
+			<tr>	<td>RGB</td>	<td>46</td>		<td>45</td>		<td>44</td>						</tr>
+			<tr>	<td>HSB</td>	<td>30°</td>	<td>15%</td>	<td>18%</td>					</tr>
+			<!--
+			<tr>	<td>CMYK</td>	<td>69%</td>	<td>64%</td>	<td>64%</td>	<td>64%</td>	</tr>
+			<tr>	<td>Lab</td>	<td>18</td>		<td>0</td>		<td>1</td>						</tr>
+			-->
+		</table>
+
+		<hr>
+
 	</body>
 	
 </html>
+
+
+
+<style>
+	/* this page specific layout… */
+
+	body {
+		/* At a root font size of 16px
+		   a full 960px page = 60rem.
+		   (960/16=60) */
+		width: 30rem;
+		margin:auto;
+	}
+	hr{ border: none; border-top: 1px solid #7AA3CC; margin-top: 3rem; margin-bottom: 3rem; }
+	img { width: 100%; }
+
+	table { border-collapse: collapse; table-layout: fixed; letter-spacing: 0.05em; }
+	td { min-width: 3rem; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC; padding-top: 0.5em; padding-bottom: 0.5em;}
+	h4 + table { margin-top: -0.5em;}
+	table + h4 { margin-top: 2em; }
+
+	.sample {width: 2rem; height: 2rem; display: inline-block; vertical-align: bottom; margin-right: 1rem;}
+	.blue .sample			{ background-color: #1F5C99;}
+	.lightBlue .sample		{ background-color: #7AA3CC;}
+	.orange .sample			{ background-color: #FF8000;}
+	.darkWarmGrey .sample	{ background-color: #2E2D2C;}
+	
+</style>
