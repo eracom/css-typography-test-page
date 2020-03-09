@@ -9,10 +9,12 @@
 			/* IMPORT FONTS */
 			@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 			@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
+			/* @import statements need to be the _first_ items in a CSS file… */
+
 
 			/* BODY FONT */
 			body { font-family: 'Source Sans Pro', sans-serif; }
-			
+
 			/* TITLES */
 			h1, h2, h3, h4 { font-family: 'Libre Franklin', sans-serif; }
 
@@ -25,23 +27,88 @@
 			/* base default: 1rem = 16 pixels = 12pt = 96dpi */
 
 			/* <html> font size = 1rem = 16 pixels */
-			    h1 { font-size: 4.0rem; } /* standard default = 2rem = 32px = 24pt */
-			    h2 { font-size: 2.5rem; } /* standard default = 1.5rem = 24px = 18pt */
-			    h3 { font-size: 1.5rem; } /* standard default = ~1.17rem = ~18px = 13.5pt */
-			    h4 { font-size: 1.0rem; } /* standard default = 1rem = 16px = 12pt */
-			     p { font-size: 1.0rem; } /* 100% */
-			.small { font-size: 0.8rem; } /* standard default ~= 0.8em = ~13px = ~10pt */
+			h1 { font-size: 2.50rem; }
+			h2 { font-size: 2.00rem; }
+			h3 { font-size: 1.75rem; }
+			h4 { font-size: 1.50rem; }
+			h5 { font-size: 1.25rem; }
+			h6 { font-size: 1.00rem; }
+			
+			h1.display { font-size: 4rem; }
 
+			small, .small { font-size: 85%; } /* standard default ~= 0.8em = ~13px = ~10pt */
+
+			small small, 
+			.x-small, 
+			.small .small { 
+				font-size: 75%;
+			}
+
+			/*	HTML CSS Defaults https://www.w3.org/TR/CSS2/sample.html 
+				There is no single universal default, browsers have different default values.
+				h1: 2em
+				h2: 1.5em
+				h3: 1.17em
+				h4: 1em
+				h5: 0.83em
+
+				Bootstrap defaults 
+				h1: 2.50rem
+				h2: 2.00rem
+				h3: 1.75rem
+				h4: 1.50rem
+				h5: 1.25rem
+				h6: 1.00rem
+			*/
+
+
+
+
+			/*	FONT-STYLE	*/
+			h5, h6 { font-style: italic; }
+
+
+
+
+			/* FONT WEIGHTS */
+			/* CSS Font Weights
+				100 (ultralight) – 900 (extrabold)
+				400 = normal
+				700 = bold
+			*/
+
+			  body, p { font-weight: 300; }
+			b, strong { font-weight: 500 !important; }
+
+
+			h1, h2 { font-weight: 300; }
+
+			h1 b, h1 strong,
+			h2 b, h3 strong { 
+				font-weight: 500 !important;
+			}
+
+
+			h3, h4, h5, h6 { font-weight: 500; }
+
+			h3 b, h3 strong,
+			h4 b, h4 strong,
+			h5 b, h5 strong,
+			h6 b, h6 strong { 
+				font-weight: 700 !important;
+			}
+
+			h1.display { font-weight: 100; }
 
 
 
 			/* LINE HEIGHT */
-			    h1 { line-height: 1em; }
-			    h2 { line-height: 1em; }
-			    h3 { line-height: 1em; }
-			    h4 { line-height: 1em; }
+			    h1 { line-height: 1em;    }
+			    h2 { line-height: 1em;    }
+			    h3 { line-height: 1em;    }
+			    h4 { line-height: 1em;    }
 			     p { line-height: 1.33em; }
-			.small { line-height: 1.5em; }
+			.small { line-height: 1.5em;  }
 
 
 			/* MARGINS */
@@ -51,31 +118,38 @@
 			h4 { } /* standard default: = h4 { margin-top: 1.33em;  margin-bottom: 1.33em; } */
 			 p { } /* standard default: =  p { margin-top: 1em;     margin-bottom: 1em;    } */
 
+			h1 + p { }
+			h2 + p { }
+			h3 + p { }
+			h4 + p { }
+			h5 + p { }
+			h6 + p { }
+
+			p + h1 { }
+			p + h2 { }
+			p + h3 { }
+			p + h4 { }
+			p + h5 { }
+			p + h6 { }
 
 
 
-			/* FONT WEIGHTS */
-			h1 { font-weight: 800; }
-			h2 { font-weight: 100; }
-			h3 { font-weight: 600; }
-			h4 { font-weight: 700; }
-			 p { font-weight: 400; }
-			/* CSS Font Weights
-				100 (ultralight) – 900 (extrabold)
-				400 = normal
-				700 = bold
-			*/
 
-
-			/* TYPOGRAPHY */
-
+			/*	LETTER_SPACING */
 			h1 { letter-spacing: -0.067rem; }
+
 			.small { letter-spacing: 0.025em; }
 
-			/* better typography, but can slow down the page…
+			small small, 
+			.x-small, 
+			.small .small { 
+				letter-spacing: 0.033em;
+			}
+
+			/* better typography, but can be slow…
 			https://css-tricks.com/almanac/properties/t/text-rendering/ 
 			https://developer.mozilla.org/fr/docs/Web/CSS/text-rendering */
-			body { text-rendering: optimizeLegibility; }
+			      body { text-rendering: optimizeLegibility; }
 			h1, h2, h3 { text-rendering: geometricPrecision; }
 
 
@@ -114,13 +188,13 @@
 
 			/*
 				Dark Warm Grey
-				Hex:	#2E2D2C
-				RGB:	46  45  44
-				HSB:	30°  15%  18%
-				CMYK:	69%  64%  64%  64%
-				Lab:	18  0  1
+				Hex:	#2E2A26
+				RGB:	46  42  38
+				HSB:	30°  18%  18%
+				CMYK:	66%  61%  62%  74%
+				Lab:	17  1  3
 			*/
-			.darkWarmGrey { color: #2E2D2C; }
+			.darkWarmGrey { color: #2E2A26; }
 
 
 			/* COLOR */
@@ -130,6 +204,10 @@
 			}
 			h1, h2, h3, h4 { color: #1f5c99;}
 
+
+
+
+			/* LINKS */
 			a:link, a:visited, a:hover, a:active {
 				color: #2E2D2C;
 				text-decoration: none;
@@ -143,67 +221,238 @@
 			a:active { }
 
 
+
+
+			/* LISTS */
+
+
+
+			/* Quotes */
+			blockquote{
+				margin-left: 0;
+				padding-left: 2rem;
+				border-left: 1px solid #CCC;
+				font-style: italic;
+			}
+
+
+
+
+			/* TABLES */
+			table { 
+				width: 100%; 
+				border-collapse: collapse;
+			}
+			
+			table, tr, td { border: none; }
+			th, td { border-bottom: 1px solid #7AA3CC; }
+			
+			th { font-weight: normal; font-style: italic; }
+			
+			th, td { text-align: right; }
+			td:first-of-type,
+			th:first-of-type { text-align: left; }
+
+
+
+
 		</style>
 	</head>
 
 	<body>
-		<h1>City cruising</h1>
-		<h2>Bordering on invisible</h2>
-		<h3>Dual scoops on the hood</h3>
-		<h4>A sheriff’s vehicle originally bought at an auction in Tennessee</h4>
-		<p>The car was a boxy late model Ford sedan, white over black, innocuous bordering on invisible, and very fast. It had been a sheriff’s vehicle originally bought at an auction in Tennessee, and further modified for speed. Perry and I listened to the big engine idle, checked the dual scoops on the hood. I had not seen one of those on the road since high school. <i>“You like the car?”</i> Perry asked. <i>“It’s all right,”</i> I said, my eyes ahead. <i>“I’ve never been much of a Ford man.”</i> Perry shifted in his bucket, <i>“You know something about cars? For city cruising, it'll do.”</i> I spent my childhood in <a href="#">Riverdale, New Jersey</a>, thirty miles north from long, narrow Manhattan Island, which sits in the bay, among other islands,</p>
-		<img src="https://i0.wp.com/film-grab.com/wp-content/uploads/2016/01/39163.jpg">
-		<p class="small">The car was a boxy late model Ford sedan, white over black, innocuous bordering on invisible, and very fast. It had been a sheriff’s vehicle originally bought at an auction in Tennessee, and further modified for speed. Perry and I listened to the big engine idle, checked the dual scoops on the hood. I had not seen one of those on the road since high school. <i>“You like the car?”</i> Perry asked. <i>“It’s all right,”</i> I said, my eyes ahead. <i>“I’ve never been much of a Ford man.”</i> Perry shifted in his bucket, <i>“You know something about cars? For city cruising, it'll do.”</i> I spent my childhood in Riverdale, New Jersey, thirty miles north from long, narrow Manhattan Island, which sits in the bay, among other islands,</p>
-		<h3>Further modified for speed</h3>
-		<p>The car was a boxy late model Ford sedan, white over black, innocuous bordering on invisible, and very fast. It had been a sheriff’s vehicle originally bought at an auction in Tennessee, and further modified for speed. Perry and I listened to the big engine idle, checked the dual scoops on the hood. I had not seen one of those on the road since high school. <i>“You like the car?”</i> Perry asked. <i>“It’s all right,”</i> I said, my eyes ahead. <i>“I’ve never been much of a Ford man.”</i> Perry shifted in his bucket, <i>“You know something about cars? For city cruising, it'll do.”</i> I spent my childhood in Riverdale, New Jersey, thirty miles north from long, narrow Manhattan Island, which sits in the bay, among other islands,</p>
+
+		<h1 class="display">Lorem ipsum</h1>
+		<h2>Dolor sit amet</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus corporis odit neque iusto illum rem in. Quas nihil suscipit, voluptatum placeat delectus cum quisquam voluptas alias. Error repellendus earum perferendis?</p>
+		<h3>Consectetur adipisicing elit</h3>
+		<p>Lorem ipsum <a href="#">dolor sit amet consectetur adipisicing elit</a>. Hic sapiente dolorum porro, libero consectetur recusandae! Repellat velit vel quia dicta, dolores labore perspiciatis quod? Laboriosam eius quaerat nostrum libero possimus.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia blanditiis quos? Quis, optio? Dolorum, sunt nostrum aliquam sequi consequatur odio nesciunt cumque! Expedita, facere distinctio possimus repellendus suscipit repudiandae?</p>
+		<h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus veritatis omnis quas, quisquam accusamus aliquid consectetur aperiam ducimus perferendis veniam dolor vel quasi voluptas sint voluptatibus odit minima corporis officia!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cumque rem qui officiis explicabo cum sint rerum delectus, numquam dignissimos quisquam odio labore ea obcaecati nostrum saepe quis, tenetur corrupti.</p>
+		<h1>In culpa qui <b>officia</b> deserunt mollit anim id est <b>laborum</b>.</h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi placeat animi numquam, tempore maxime laudantium rerum neque asperiores non veniam molestias consectetur voluptatum id! Itaque accusamus eius laudantium culpa.</p>
+		
+		<ul>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+			<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+			<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+			<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</li>
+			<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</li>
+		</ul>
+
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ipsa voluptatum deleniti voluptatem illum iste laborum eum dolores maiores esse inventore quas voluptates enim omnis odit iure perferendis ab. Nobis.</p>
+
+		<blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quibusdam ea eos voluptatibus quis quidem! Et eum tenetur odit, quae corrupti nobis quod labore earum? Modi amet temporibus cumque quae!</blockquote>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugit sint maiores consequuntur dolore sunt commodi eius nesciunt voluptate iusto voluptas numquam quidem voluptates ullam error perspiciatis dolorem, velit veritatis?</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Unit Price</th>
+					<th>10 pack</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Candy</td>
+					<td>0.99</td>
+					<td>8.99</td>
+				</tr>
+				<tr>
+					<td>Gum</td>
+					<td>1.99</td>
+					<td>18.99</td>
+				</tr>
+				<tr>
+					<td>Booze</td>
+					<td>99.99</td>
+					<td>667.99</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eligendi labore assumenda tempora enim est perferendis veniam maxime asperiores distinctio reiciendis aspernatur perspiciatis ex officia dolores? Nesciunt voluptas odio sint!</p>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis facilis expedita dolorem dolores consectetur! Qui velit pariatur similique. Ducimus officiis labore animi est reprehenderit cumque incidunt unde odio sequi aspernatur.</p>
+
+
+
 		<hr>
 		<h4>Colors:</h4>
 
-		<h4 class="blue"><div class="sample">&nbsp;</div>Blue</h4>
-		<table class="blue">
-			<tr>	<td>Hex</td>	<td colspan="4">#1F5C99</td>								</tr>
-			<tr>	<td>RGB</td>	<td>31</td>		<td>92</td>		<td>153</td>				</tr>
-			<tr>	<td>HSB</td>	<td>210°</td>	<td>80%</td>	<td>60%</td>				</tr>
-			<!--
-			<tr>	<td>CMYK</td>	<td>93%</td>	<td>68%</td>	<td>13%</td>	<td>1%</td>	</tr>
-			<tr>	<td>Lab</td>	<td>38</td>		<td>-2</td>		<td>-40</td>				</tr>
-			-->
-		</table>
+		<div class="colorInfo blue">
+			<h4><span class="swatch">&nbsp;</span>Blue</h4>
+			<table class="blue">		<!-- .blue -->
+				<tr>	<td>Hex</td>	<td colspan="4">#1F5C99</td>								</tr>
+				<tr>	<td>RGB</td>	<td>31</td>		<td>92</td>		<td>153</td>				</tr>
+				<tr>	<td>HSB</td>	<td>210°</td>	<td>80%</td>	<td>60%</td>				</tr>
+				<!--
+				<tr>	<td>CMYK</td>	<td>93%</td>	<td>68%</td>	<td>13%</td>	<td>1%</td>	</tr>
+				<tr>	<td>Lab</td>	<td>38</td>		<td>-2</td>		<td>-40</td>				</tr>
+				-->
+			</table>
+		</div>
 
-		<h4 class="lightBlue"><div class="sample">&nbsp;</div>Light Blue</h4>
-		<table class="lightBlue">
-			<tr>	<td>Hex</td>	<td colspan="4">#7AA3CC</td>								</tr>
-			<tr>	<td>RGB</td>	<td>122</td>	<td>163</td>	<td>204</td>				</tr>
-			<tr>	<td>HSB</td>	<td>210°</td>	<td>40%</td>	<td>80%</td>				</tr>
-			<!--
-			<tr>	<td>CMYK</td>	<td>53%</td>	<td>27%</td>	<td>6%</td>		<td>0%</td>	</tr>
-			<tr>	<td>Lab</td>	<td>65</td>		<td>-6</td>		<td>-26</td>				</tr>
-			-->
-		</table>
+		<div class="colorInfo lightBlue">
+			<h4><span class="swatch">&nbsp;</span>Light Blue</h4>
+			<table class="lightBlue">		<!-- .lightBlue -->
+				<tr>	<td>Hex</td>	<td colspan="4">#7AA3CC</td>								</tr>
+				<tr>	<td>RGB</td>	<td>122</td>	<td>163</td>	<td>204</td>				</tr>
+				<tr>	<td>HSB</td>	<td>210°</td>	<td>40%</td>	<td>80%</td>				</tr>
+				<!--
+				<tr>	<td>CMYK</td>	<td>53%</td>	<td>27%</td>	<td>6%</td>		<td>0%</td>	</tr>
+				<tr>	<td>Lab</td>	<td>65</td>		<td>-6</td>		<td>-26</td>				</tr>
+				-->
+			</table>
+		</div>
 
-		<h4 class="orange"><div class="sample">&nbsp;</div>Orange</h4>
-		<table class="orange">
-			<tr>	<td>Hex</td>	<td colspan="4">#FF8000</td>								</tr>
-			<tr>	<td>RGB</td>	<td>255</td>	<td>128</td>	<td>0</td>					</tr>
-			<tr>	<td>HSB</td>	<td>30°</td>	<td>100%</td>	<td>100%</td>				</tr>
-			<!--
-			<tr>	<td>CMYK</td>	<td>0%</td>		<td>62%</td>	<td>100%</td>	<td>0%</td>	</tr>
-			<tr>	<td>Lab</td>	<td>68</td>		<td>46</td>		<td>75</td>				</tr>
-			-->
-		</table>
+		<div class="colorInfo orange">
+			<h4><span class="swatch">&nbsp;</span>Orange</h4>
+			<table class="orange">		<!-- .orange -->
+				<tr>	<td>Hex</td>	<td colspan="4">#FF8000</td>								</tr>
+				<tr>	<td>RGB</td>	<td>255</td>	<td>128</td>	<td>0</td>					</tr>
+				<tr>	<td>HSB</td>	<td>30°</td>	<td>100%</td>	<td>100%</td>				</tr>
+				<!--
+				<tr>	<td>CMYK</td>	<td>0%</td>		<td>62%</td>	<td>100%</td>	<td>0%</td>	</tr>
+				<tr>	<td>Lab</td>	<td>68</td>		<td>46</td>		<td>75</td>				</tr>
+				-->
+			</table>
+		</div>
 
-		<h4 class="darkWarmGrey"><div class="sample">&nbsp;</div>Dark Warm Grey</h4>
-		<table class="darkWarmGrey">
-			<tr>	<td>Hex</td>	<td colspan="4">#2E2D2C</td>									</tr>
-			<tr>	<td>RGB</td>	<td>46</td>		<td>45</td>		<td>44</td>						</tr>
-			<tr>	<td>HSB</td>	<td>30°</td>	<td>15%</td>	<td>18%</td>					</tr>
-			<!--
-			<tr>	<td>CMYK</td>	<td>69%</td>	<td>64%</td>	<td>64%</td>	<td>64%</td>	</tr>
-			<tr>	<td>Lab</td>	<td>18</td>		<td>0</td>		<td>1</td>						</tr>
-			-->
-		</table>
+		<div class="colorInfo darkWarmGrey">
+			<h4><span class="swatch">&nbsp;</span>Dark Warm Grey</h4>
+			<table>		<!-- Dark Warm Grey -->
+				<tr>	<td>Hex</td>	<td colspan="4">#2E2A26</td>									</tr>
+				<tr>	<td>RGB</td>	<td>46</td>		<td>42</td>		<td>38</td>						</tr>
+				<tr>	<td>HSB</td>	<td>30°</td>	<td>18%</td>	<td>18%</td>					</tr>
+				<!--
+				<tr>	<td>CMYK</td>	<td>66%</td>	<td>61%</td>	<td>62%</td>	<td>74%</td>	</tr>
+				<tr>	<td>Lab</td>	<td>17</td>		<td>1</td>		<td>3</td>						</tr>
+				-->
+			</table>
+		</div>
 
 		<hr>
+
+
+		<h1 class="display">Design guide</h1>
+
+		<hr>
+
+		<h2>Typographie</h2>
+
+		<p>Typeface:</p>
+		<h3>…</h3>
+
+
+		<h1 class="display">H1.display
+			<br>font-size: 42pt | 3.5rem
+			<br>font-weight: 100
+			<br>line-height: 100% | 1em
+			<br>color: Bleu #3B8EDE
+		</h1>
+
+		<h1><strong>H1</strong>
+			<br>font-size: 30pt | 2.5rem
+			<br>font-weight: 300
+			<br>color: Bleu #3B8EDE
+		</h1>
+		
+		<h2><strong>H2</strong>
+			<br>font-size: 24pt | 2rem
+			<br>font-weight: 300
+			<br>color: Ombrage bleu	50% | #1E476F
+		</h2>
+		
+		<h3><strong>H3</strong>
+			<br>font-size: 21pt | 1.75rem
+			<br>font-weight: 500
+			<br>color: Bleu Pantone 279 C | #3B8EDE
+		</h3>
+
+		<h4><strong>H4</strong>
+			<br>font-size: 18pt | 1.5rem
+			<br>font-weight: 500
+			<br>color: Gris moyen 50% | #7F7F7F
+		</h4>
+		
+		<h5><strong>H5</strong>
+			<br>font-size: 15pt | 1.25rem
+			<br>font-weight: 500
+			<br>font-style: italic
+			<br>color: Gris moyen 50% | #7F7F7F
+		</h5>
+
+		<h6><strong>H6</strong>
+			<br>font-size: 12pt | 1rem
+			<br>font-weight: 500
+			<br>font-style: italic
+			<br>color: Gris moyen 50% | #7F7F7F
+		</h6>
+
+		<p><strong>P</strong>
+		<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<p>font-size: 12pt | 1rem
+		<br>font-weight: 300
+		<br>color: Gris foncé | #222222
+		<p><strong>b</strong>, <strong>strong</strong><br> font-weight: 500</p>
+		<p class="small">	<strong>small</strong><br>		font-size: 85% (10.2pt)	<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p class="x-small">	<strong>.x-small</strong><br>	font-size: 75% (9pt)	<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		<hr>
+
+		<h3>Interligne</h3>
+
+		<p>Body, P, 
+		<br>line-height: 133% | 1.33em</p>
+			
+		<p>H1 – H6
+		<br>line-height: 100% | 1em</p>
+
+		<hr>
+
 
 	</body>
 	
@@ -212,7 +461,7 @@
 
 
 <style>
-	/* this page specific layout… */
+	/* Styles for this specific document */
 
 	body {
 		/* At a root font size of 16px
@@ -224,15 +473,16 @@
 	hr{ border: none; border-top: 1px solid #7AA3CC; margin-top: 3rem; margin-bottom: 3rem; }
 	img { width: 100%; }
 
-	table { border-collapse: collapse; table-layout: fixed; letter-spacing: 0.05em; }
-	td { min-width: 3rem; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC; padding-top: 0.5em; padding-bottom: 0.5em;}
-	h4 + table { margin-top: -0.5em;}
-	table + h4 { margin-top: 2em; }
+	.colorInfo table { width: auto; border-collapse: collapse; letter-spacing: 0.05em; }
+	.colorInfo td { min-width: 3rem; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC; padding-top: 0.5em; padding-bottom: 0.5em;}
+	.colorInfo h4 + table { margin-top: -0.5em;}
+	.colorInfo table + h4 { margin-top: 2em; }
 
-	.sample {width: 2rem; height: 2rem; display: inline-block; vertical-align: bottom; margin-right: 1rem;}
-	.blue .sample			{ background-color: #1F5C99;}
-	.lightBlue .sample		{ background-color: #7AA3CC;}
-	.orange .sample			{ background-color: #FF8000;}
-	.darkWarmGrey .sample	{ background-color: #2E2D2C;}
+	.swatch { width: 2rem; height: 2rem; display: inline-block; vertical-align: bottom; margin-right: 1rem;}
+
+	        .blue .swatch { background-color: #1F5C99;}	        .blue h4 { color: #1F5C99;}
+	   .lightBlue .swatch { background-color: #7AA3CC;}	   .lightBlue h4 { color: #7AA3CC;}
+	      .orange .swatch { background-color: #FF8000;}	      .orange h4 { color: #FF8000;}
+	.darkWarmGrey .swatch { background-color: #2E2A26;}	.darkWarmGrey h4 { color: #2E2A26;}
 	
 </style>
