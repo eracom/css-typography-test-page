@@ -103,12 +103,13 @@
 
 
 			/* LINE HEIGHT */
-			    h1 { line-height: 1em;    }
-			    h2 { line-height: 1em;    }
-			    h3 { line-height: 1em;    }
-			    h4 { line-height: 1em;    }
-			     p { line-height: 1.33em; }
-			.small { line-height: 1.5em;  }
+			body, * { line-height: 1.33em; }
+			     h1 { line-height: 1em;    }
+			     h2 { line-height: 1em;    }
+			     h3 { line-height: 1em;    }
+			     h4 { line-height: 1em;    }
+			      p { line-height: 1.33em; }
+			 .small { line-height: 1.5em;  }
 
 
 			/* MARGINS */
@@ -120,10 +121,10 @@
 
 			h1 + p { }
 			h2 + p { }
-			h3 + p { }
-			h4 + p { }
-			h5 + p { }
-			h6 + p { }
+			h3 + p { margin-top: -1.5em; }
+			h4 + p { margin-top: -1.5em; }
+			h5 + p { margin-top: -1.5em; }
+			h6 + p { margin-top: -1.5em; }
 
 			p + h1 { }
 			p + h2 { }
@@ -136,7 +137,7 @@
 
 
 			/*	LETTER_SPACING */
-			h1 { letter-spacing: -0.067rem; }
+			h1 { letter-spacing: -0.033em; }
 
 			.small { letter-spacing: 0.025em; }
 
@@ -188,19 +189,19 @@
 
 			/*
 				Dark Warm Grey
-				Hex:	#2E2A26
-				RGB:	46  42  38
-				HSB:	30°  18%  18%
-				CMYK:	66%  61%  62%  74%
-				Lab:	17  1  3
+				Hex:	#322E29
+				RGB:	50  46  41
+				HSB:	30°  10%  18%
+				CMYK:	66%  61%  62%  74% ?
+				Lab:	17  1  3 ?
 			*/
-			.darkWarmGrey { color: #2E2A26; }
+			.darkWarmGrey { color: #322E29; }
 
 
 			/* COLOR */
 			body {
 				background-color: #FFF;
-				color: #2E2D2C;
+				color: #322E29;
 			}
 			h1, h2, h3, h4 { color: #1f5c99;}
 
@@ -224,10 +225,28 @@
 
 
 			/* LISTS */
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul li {
+				margin-bottom: 0.5em;
+				text-indent: -0.5rem;
+			}
+				li:before {
+					font-weight: 900;
+					content: "·";
+					color: #FF8000;
+					display: inline-block;
+					width: 0.5rem;
+			}
 
 
 
-			/* Quotes */
+
+			/* QUOTES */
 			blockquote{
 				margin-left: 0;
 				padding-left: 2rem;
@@ -240,18 +259,32 @@
 
 			/* TABLES */
 			table { 
-				width: 100%; 
 				border-collapse: collapse;
+				   margin-top: 2em;
+				margin-bottom: 2em;
+			}
+			
+			th, td { 
+				   padding-top: 0.25em;
+				padding-bottom: 0.25em;
 			}
 			
 			table, tr, td { border: none; }
 			th, td { border-bottom: 1px solid #7AA3CC; }
 			
-			th { font-weight: normal; font-style: italic; }
+			th { font-style: italic; font-weight: 300; color: #7AA3CC;}
 			
-			th, td { text-align: right; }
+			th, td { 
+				text-align: right;
+				padding-left: 2em;
+				padding-right: 0;
+			}
 			td:first-of-type,
-			th:first-of-type { text-align: left; }
+			th:first-of-type { 
+				text-align: left;
+				padding-left: 0;
+				padding-right: 2em;
+			}
 
 
 
@@ -264,12 +297,12 @@
 		<section id="content">
 
 			<h1 class="display">Lorem ipsum</h1>
-			<h2>Dolor sit amet</h2>
+			<h2>Dolor sit amet H2</h2>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus corporis odit neque iusto illum rem in. Quas nihil suscipit, voluptatum placeat delectus cum quisquam voluptas alias. Error repellendus earum perferendis?</p>
-			<h3>Consectetur adipisicing elit</h3>
+			<h3>Consectetur adipisicing elit H3</h3>
 			<p>Lorem ipsum <a href="#">dolor sit amet consectetur adipisicing elit</a>. Hic sapiente dolorum porro, libero consectetur recusandae! Repellat velit vel quia dicta, dolores labore perspiciatis quod? Laboriosam eius quaerat nostrum libero possimus.</p>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia blanditiis quos? Quis, optio? Dolorum, sunt nostrum aliquam sequi consequatur odio nesciunt cumque! Expedita, facere distinctio possimus repellendus suscipit repudiandae?</p>
-			<h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+			<h4>Lorem ipsum dolor sit amet consectetur adipisicing elit H4</h4>
 			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus veritatis omnis quas, quisquam accusamus aliquid consectetur aperiam ducimus perferendis veniam dolor vel quasi voluptas sint voluptatibus odit minima corporis officia!</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cumque rem qui officiis explicabo cum sint rerum delectus, numquam dignissimos quisquam odio labore ea obcaecati nostrum saepe quis, tenetur corrupti.</p>
 			<h1>In culpa qui <b>officia</b> deserunt mollit anim id est <b>laborum</b>.</h1>
@@ -283,6 +316,7 @@
 				<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</li>
 			</ul>
 
+			<h5>Lorem ipsum dolor sit amet consectetur adipisicing elit H5</h5>
 			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ipsa voluptatum deleniti voluptatem illum iste laborum eum dolores maiores esse inventore quas voluptates enim omnis odit iure perferendis ab. Nobis.</p>
 
 			<blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quibusdam ea eos voluptatibus quis quidem! Et eum tenetur odit, quae corrupti nobis quod labore earum? Modi amet temporibus cumque quae!</blockquote>
@@ -311,12 +345,14 @@
 					<tr>
 						<td>Booze</td>
 						<td>99.99</td>
-						<td>667.99</td>
+						<td>666.&mdash;</td>
 					</tr>
 				</tbody>
 			</table>
 
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eligendi labore assumenda tempora enim est perferendis veniam maxime asperiores distinctio reiciendis aspernatur perspiciatis ex officia dolores? Nesciunt voluptas odio sint!</p>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis facilis expedita dolorem dolores consectetur! Qui velit pariatur similique. Ducimus officiis labore animi est reprehenderit cumque incidunt unde odio sequi aspernatur.</p>
+			<h6>Lorem ipsum dolor sit amet consectetur adipisicing elit H6</h6>
 			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis facilis expedita dolorem dolores consectetur! Qui velit pariatur similique. Ducimus officiis labore animi est reprehenderit cumque incidunt unde odio sequi aspernatur.</p>
 
 		</section><!-- #Content -->
@@ -369,10 +405,10 @@
 			<div class="colorInfo darkWarmGrey">
 				<h4><span class="swatch">&nbsp;</span>Dark Warm Grey</h4>
 				<table>		<!-- Dark Warm Grey -->
-					<tr>	<td>Hex</td>	<td colspan="4">#2E2A26</td>									</tr>
-					<tr>	<td>RGB</td>	<td>46</td>		<td>42</td>		<td>38</td>						</tr>
-					<tr>	<td>HSB</td>	<td>30°</td>	<td>18%</td>	<td>18%</td>					</tr>
-					<!--
+					<tr>	<td>Hex</td>	<td colspan="4">#322E29</td>									</tr>
+					<tr>	<td>RGB</td>	<td>50</td>		<td>46</td>		<td>41</td>						</tr>
+					<tr>	<td>HSB</td>	<td>30°</td>	<td>10%</td>	<td>18%</td>					</tr>
+					<!--???
 					<tr>	<td>CMYK</td>	<td>66%</td>	<td>61%</td>	<td>62%</td>	<td>74%</td>	</tr>
 					<tr>	<td>Lab</td>	<td>17</td>		<td>1</td>		<td>3</td>						</tr>
 					-->
@@ -481,6 +517,10 @@
 		
 	hr{ border: none; border-top: 1px solid #7AA3CC; margin-top: 3rem; margin-bottom: 3rem; }
 	img { width: 100%; }
+	
+	.colorInfo th, .colorInfo td { 
+		padding:0;
+	}
 
 	.colorInfo table { width: auto; border-collapse: collapse; letter-spacing: 0.05em; }
 	.colorInfo td { min-width: 3rem; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC; padding-top: 0.5em; padding-bottom: 0.5em;}
@@ -489,9 +529,9 @@
 
 	.swatch { width: 2rem; height: 2rem; display: inline-block; vertical-align: bottom; margin-right: 1rem;}
 
-	        .blue .swatch { background-color: #1F5C99;}	        .blue h4 { color: #1F5C99;}
-	   .lightBlue .swatch { background-color: #7AA3CC;}	   .lightBlue h4 { color: #7AA3CC;}
-	      .orange .swatch { background-color: #FF8000;}	      .orange h4 { color: #FF8000;}
-	.darkWarmGrey .swatch { background-color: #2E2A26;}	.darkWarmGrey h4 { color: #2E2A26;}
+	        .blue .swatch { background-color: #1F5C99;}	        .blue * { color: #1F5C99;}
+	   .lightBlue .swatch { background-color: #7AA3CC;}	   .lightBlue * { color: #7AA3CC;}
+	      .orange .swatch { background-color: #FF8000;}	      .orange * { color: #FF8000;}
+	.darkWarmGrey .swatch { background-color: #322E29;}	.darkWarmGrey * { color: #322E29;}
 	
 </style>
