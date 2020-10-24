@@ -147,21 +147,27 @@
 /*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	MARGINS */
 
-	h1 { } /* standard default: = h1 { margin-top: 0.67em;  margin-bottom: 0.67em; } */
-	h2 { } /* standard default: = h2 { margin-top: 0.83em;  margin-bottom: 0.83em; } */
-	h3 { } /* standard default: = h3 { margin-top: 1em;     margin-bottom: 1em;    } */
-	h4 { } /* standard default: = h4 { margin-top: 1.33em;  margin-bottom: 1.33em; } */
+	/* standard default:		h1 { margin-top: 0.67em;  margin-bottom: 0.67em; }	*/
+	/* standard default:		h2 { margin-top: 0.83em;  margin-bottom: 0.83em; }	*/
+	/* standard default:		h3 { margin-top: 1.00em;  margin-bottom: 1.00em; }	*/
+	/* standard default:		h4 { margin-top: 1.33em;  margin-bottom: 1.33em; }	*/
+	/* standard default:		h5 { margin-top: 1.67em;  margin-bottom: 1.67em; }	*/
+	/* standard default:		h6 { margin-top: 2.33em;  margin-bottom: 2.33em; }	*/
+	/* standard default:		 p { margin-top: 1.00em;  margin-bottom: 1.00em; }	*/
+
+	h1 { }
+	h2 { }
+	h3 { }
+	h4 { }
 	h5 { }
 	h6 { }
-	 p { } /* standard default: =  p { margin-top: 1em;     margin-bottom: 1em;    } */
-
-	/*	TO-DO: Finish this documentation, complete with Bootstrap defaults… */
+	 p { }
 
 	p + p { }
 
 	h1 + p { }
 	h2 + p { }
-	h3 + p { }
+	h3 + p { margin-top: -1.00em;}
 	h4 + p { margin-top: -1.33em; }
 	h5 + p { margin-top: -1.67em; }
 	h6 + p { margin-top: -2.33em; }
@@ -177,7 +183,7 @@
 
 
 /*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
-/*	LETTER_SPACING	*/
+/*	LETTER-SPACING	*/
 
 	h1 { letter-spacing: -0.02em; }
 
@@ -210,7 +216,27 @@
 /*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	COLOR */
+	
+	/*
+		If you want to use variables:
+		first, define them in a root selector:
+			:root {
+				--aVar: #F1357A;
+			}
+		Then you can use them in elements:
+			h1 {
+				background-color: var(--aVar);
+			}
+		https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+		https://caniuse.com/?search=CSS%20custom%20properties
+	*/
+	/*
+		If you have *inline* SVG elments like logos or widgets that you’d like to color with CSS
+		you can use the fill property
+			svg .highlight { fill: #F1357A; }
+	*/
 
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	Blue
 		Hex:	#1F5C99
 		RGB:	31  92  153
@@ -220,6 +246,7 @@
 	*/
 	.blue, .blue * { color: #1F5C99; }
 
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	Light Blue
 		Hex:	#7AA3CC
 		RGB:	122  163  204
@@ -229,6 +256,7 @@
 	*/
 	.lightBlue, .lightBlue * { color: #7AA3CC; }
 
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	Orange
 		Hex:	#FF8000
 		RGB:	255  128  0
@@ -238,6 +266,7 @@
 	*/
 	.orange, .orange * { color: #FF8000; }
 
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	Dark Warm Grey
 		Hex:	#322E29
 		RGB:	50  46  41
@@ -247,6 +276,7 @@
 	*/
 	.darkWarmGrey, .darkWarmGrey * { color: #322E29; }
 
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	Light Warm Grey
 		Hex:	#7F7C79
 		RGB:	127  124  121
@@ -256,6 +286,7 @@
 	*/
 	.lightWarmGrey, .lightWarmGrey * { color: #7F7C79; }
 
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 
 
 
@@ -368,6 +399,12 @@
 
 	<body>
 
+
+
+
+<!--	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-->
+<!--	SAMPLE ELEMENTS – for testing	-->
+
 		<section id="Sample">
 
 			<h1 class="display">Sample elements <br>H1 display</h1>
@@ -431,7 +468,12 @@
 
 		</section><!-- #Sample -->
 
-		<hr>
+
+
+
+<hr>
+<!--	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-->
+<!--	COLOR SWATCHES – and references	-->
 
 		<section id="Colors">
 
@@ -504,7 +546,11 @@
 
 		</section><!-- #Colors -->
 
-		<hr>
+
+
+<hr>
+<!--	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-->
+<!--	DESIGN GUIDE DOCUMENTATION	-->
 
 		<section id="Documentation">
 
@@ -591,9 +637,15 @@
 
 
 
-<style>
-	/* Styles for this specific document */
 
+
+
+
+
+<!--	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-->
+<!--	PAGE LAYOUT AND DESIGN FOR THIS DESIGN GUIDE DOCUMENT ONLY		-->
+
+<style>
 	body {
 		/* At a root font size of 16px
 		   a full 960px page = 60rem.
