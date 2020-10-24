@@ -5,6 +5,68 @@
 	<title>Design Guide and Base CSS</title>
 	<style type="text/css" media="screen">
 
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	CSS RESET */
+
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+	   v2.0 | 20110126
+	   License: none (public domain)
+	*/
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+
+
+
+
+
+
+
 /*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	TYPOGRAPHY	*/
@@ -144,42 +206,6 @@
 	 .small { line-height: 1.5em;  }
 
 
-/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
-/*	MARGINS */
-
-	/* standard default:		h1 { margin-top: 0.67em;  margin-bottom: 0.67em; }	*/
-	/* standard default:		h2 { margin-top: 0.83em;  margin-bottom: 0.83em; }	*/
-	/* standard default:		h3 { margin-top: 1.00em;  margin-bottom: 1.00em; }	*/
-	/* standard default:		h4 { margin-top: 1.33em;  margin-bottom: 1.33em; }	*/
-	/* standard default:		h5 { margin-top: 1.67em;  margin-bottom: 1.67em; }	*/
-	/* standard default:		h6 { margin-top: 2.33em;  margin-bottom: 2.33em; }	*/
-	/* standard default:		 p { margin-top: 1.00em;  margin-bottom: 1.00em; }	*/
-
-	h1 { }
-	h2 { }
-	h3 { }
-	h4 { }
-	h5 { }
-	h6 { }
-	 p { }
-
-	p + p { }
-
-	h1 + p { }
-	h2 + p { }
-	h3 + p { margin-top: -1.00em;}
-	h4 + p { margin-top: -1.33em; }
-	h5 + p { margin-top: -1.67em; }
-	h6 + p { margin-top: -2.33em; }
-
-	p + h1 { }
-	p + h2 { }
-	p + h3 { }
-	p + h4 { }
-	p + h5 { }
-	p + h6 { }
-
-
 
 
 /*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
@@ -205,6 +231,67 @@
 	https://developer.mozilla.org/fr/docs/Web/CSS/text-rendering */
 	      body { text-rendering: optimizeLegibility; }
 	h1, h2, h3 { text-rendering: geometricPrecision; }
+
+
+
+
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	MARGINS */
+
+	/* standard default:	h1 { margin-top: 0.67em;  margin-bottom: 0.67em; }	*/
+	/* standard default:	h2 { margin-top: 0.83em;  margin-bottom: 0.83em; }	*/
+	/* standard default:	h3 { margin-top: 1.00em;  margin-bottom: 1.00em; }	*/
+	/* standard default:	h4 { margin-top: 1.33em;  margin-bottom: 1.33em; }	*/
+	/* standard default:	h5 { margin-top: 1.67em;  margin-bottom: 1.67em; }	*/
+	/* standard default:	h6 { margin-top: 2.33em;  margin-bottom: 2.33em; }	*/
+	/* standard default:	 p { margin-top: 1.00em;  margin-bottom: 1.00em; }	*/
+
+	h1, h2, h3, h4, h5, h6, p,
+	img, object, iframe, figure, figcaption, video, embed, canvas
+	blockquote, pre,
+	dl, ol, ul, table{
+		   margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	ul, ol,
+	blockquote, pre, table, dl {
+		   margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 1.5rem;
+	}
+	
+	h1 { }
+	h2 { }
+	h3 { }
+	h4 { }
+	h5 { }
+	h6 { }
+	 p { }
+
+	p + p { }
+
+	h1 + p { }
+	h2 + p { }
+	h3 + p { }
+	h4 + p { }
+	h5 + p { }
+	h6 + p { }
+
+	p + h1 { }
+	p + h2 { }
+	p + h3 { }
+	p + h4 { }
+	p + h5 { }
+	p + h6 { }
 
 
 
@@ -307,7 +394,7 @@
 
 /*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 /*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
-/*	ELEMENT DESIGN	*/
+/*	STYLING ELEMENTS	*/
 
 
 /*	LINKS	*/
@@ -329,12 +416,10 @@
 /*	LISTS	*/
 	ul {
 		list-style-type: none;
-		margin: 0;
-		padding: 0;
 	}
 
 	ul li {
-		margin-bottom: 0.5em;
+		margin-bottom: 0.5rem;
 		text-indent: -0.5rem;
 	}
 		li:before {
@@ -676,7 +761,7 @@
 	              .colorInfo td { border-bottom: 1px solid #7F7C79; }
 	.colorInfo tr:first-of-type td { border-top: 1px solid #7F7C79; }
 
-	.colorInfo h4 + table { margin-top: -0.5em; }
+	.colorInfo h4 + table { margin-top: 0.5em; }
 	.colorInfo table + h4 { margin-top: 2em; }
 
 	.swatch { width: 2rem; height: 2rem; display: inline-block; vertical-align: bottom; margin-right: 1rem; }
