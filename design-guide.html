@@ -2,19 +2,26 @@
 <html>
 	<head>
 	<meta charset="utf-8">
-	<title>Typography</title>
+	<title>Design Guide and Base CSS</title>
 	<style type="text/css" media="screen">
 
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	TYPOGRAPHY	*/
 
-	/* FONTS */
-	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	FONTS	*/
+
 	@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');
 	@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');
 	/* @import statements need to be the _first_ items in a CSS file… */
 
 
 	/* body */
-	body { font-family: 'Source Sans Pro', sans-serif; }
+	body { font-family: 'IBM Plex Sans', sans-serif; }
 
 	/* titles */
 	h1, h2, h3, h4 { font-family: 'IBM Plex Sans', sans-serif; }
@@ -29,12 +36,14 @@
 
 
 
-	/* FONT SIZES */
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	FONT SIZES	*/
 
-	html { font-size: 100%; }
 	/*	base default: 1rem = 16 pixels = 12pt = 96dpi */
+	html { font-size: 100%; }
+
 	/*	HTML CSS Defaults https://www.w3.org/TR/CSS2/sample.html
-		There is no single universal default, browsers have different default values.
+		(There is no single universal default, browsers have different default values.)
 		h1: 2em
 		h2: 1.5em
 		h3: 1.17em
@@ -49,42 +58,45 @@
 		h5: 1.25rem
 		h6: 1.00rem
 	*/
-	/*
+	/*	Conversion:
 		rem × 16 = px
 		rem × 12 = pt
 		px × 0.75 = pt
 		pt × 1.33 = px
 	*/
 
-	h1 { font-size: 2.50rem; }	/* 40px | 30pt */
-	h2 { font-size: 2.50rem; }	/* 40px | 30pt */
-	h3 { font-size: 1.75rem; }	/* 28px | 21pt */
-	h4 { font-size: 1.50rem; }	/* 24px | 18pt */
-	h5 { font-size: 1.25rem; }	/* 20px | 15pt */
-	h6 { font-size: 1.00rem; }	/* 16px | 12pt */
+	h1 { font-size: 2.50rem; }	/* 40px | 30pt */
+	h2 { font-size: 2.50rem; }	/* 40px | 30pt */
+	h3 { font-size: 1.75rem; }	/* 28px | 21pt */
+	h4 { font-size: 1.50rem; }	/* 24px | 18pt */
+	h5 { font-size: 1.25rem; }	/* 20px | 15pt */
+	h6 { font-size: 1.00rem; }	/* 16px | 12pt */
 
-	h1.display { font-size: 4rem; }	/* 64px | 48pt */
+	h1.display { font-size: 4rem; }	/* 64px | 48pt */
 
-	small, .small { font-size: 85%; }	/* 13.6px | 10.2pt */
+	small, .small { font-size: 85%; }	/* 13.6px | 10.2pt */
 	/* standard default ~= 0.8em = ~13px = ~10pt */
 
 	small small,
 	.x-small,
 	.small .small {
-		font-size: 75%;	/* 12px | 9pt */
+		font-size: 75%;	/* 12px | 9pt */
 	}
 
 
 
 
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	FONT-STYLE	*/
 
-	/*	FONT-STYLE	*/
 	h2, h5, h6 { font-style: italic; }
 
 
 
 
-	/* FONT WEIGHTS */
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	FONT WEIGHTS	*/
+
 	/* CSS Font Weights
 		100 (ultralight) – 900 (extrabold)
 		400 = normal
@@ -118,7 +130,11 @@
 
 
 
-	/* LINE HEIGHT */
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	LINE HEIGHT	*/
+
+	/*	we're using _em_ for line height, 
+		so it's proportional to the _text size_ …	*/
 	   body { line-height: 1.33em; }
 	      p { line-height: 1.33em; }
 	     h1 { line-height: 1em;    }
@@ -128,7 +144,9 @@
 	 .small { line-height: 1.5em;  }
 
 
-	/* MARGINS */
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	MARGINS */
+
 	h1 { } /* standard default: = h1 { margin-top: 0.67em;  margin-bottom: 0.67em; } */
 	h2 { } /* standard default: = h2 { margin-top: 0.83em;  margin-bottom: 0.83em; } */
 	h3 { } /* standard default: = h3 { margin-top: 1em;     margin-bottom: 1em;    } */
@@ -137,7 +155,7 @@
 	h6 { }
 	 p { } /* standard default: =  p { margin-top: 1em;     margin-bottom: 1em;    } */
 
-/*	TO-DO: Finish this documentation, complete with Bootstrap defaults… */
+	/*	TO-DO: Finish this documentation, complete with Bootstrap defaults… */
 
 	p + p { }
 
@@ -158,7 +176,9 @@
 
 
 
-	/*	LETTER_SPACING */
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	LETTER_SPACING	*/
+
 	h1 { letter-spacing: -0.02em; }
 
 	.small { letter-spacing: 0.025em; }
@@ -169,6 +189,11 @@
 		letter-spacing: 0.033em;
 	}
 
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	MICROTYPOGRAPHY AND RENDERING*/
+
 	/* better typography, but can be slow…
 	https://css-tricks.com/almanac/properties/t/text-rendering/
 	https://developer.mozilla.org/fr/docs/Web/CSS/text-rendering */
@@ -178,9 +203,15 @@
 
 
 
-	/* COLORS */
-	/*
-		Blue
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	COLOR */
+
+/*	Blue
 		Hex:	#1F5C99
 		RGB:	31  92  153
 		HSB:	210°  80%  60%
@@ -189,8 +220,7 @@
 	*/
 	.blue, .blue * { color: #1F5C99; }
 
-	/*
-		Light Blue
+/*	Light Blue
 		Hex:	#7AA3CC
 		RGB:	122  163  204
 		HSB:	210°  40%  80%
@@ -199,8 +229,7 @@
 	*/
 	.lightBlue, .lightBlue * { color: #7AA3CC; }
 
-	/*
-		Orange
+/*	Orange
 		Hex:	#FF8000
 		RGB:	255  128  0
 		HSB:	30°  100%  100%
@@ -209,8 +238,7 @@
 	*/
 	.orange, .orange * { color: #FF8000; }
 
-	/*
-		Dark Warm Grey
+/*	Dark Warm Grey
 		Hex:	#322E29
 		RGB:	50  46  41
 		HSB:	33°  18%  20%
@@ -219,8 +247,7 @@
 	*/
 	.darkWarmGrey, .darkWarmGrey * { color: #322E29; }
 
-	/*
-		Light Warm Grey
+/*	Light Warm Grey
 		Hex:	#7F7C79
 		RGB:	127  124  121
 		HSB:	33°  5%  50%
@@ -230,7 +257,10 @@
 	.lightWarmGrey, .lightWarmGrey * { color: #7F7C79; }
 
 
-	/* COLOR */
+
+
+/*	COLOR	*/
+
 	body {
 		background-color: #FFF;
 		color: #322E29;
@@ -240,7 +270,16 @@
 
 
 
-	/* LINKS */
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	ELEMENT DESIGN	*/
+
+
+/*	LINKS	*/
 	a:link, a:visited, a:hover, a:active {
 		color: #2E2D2C;
 		text-decoration: none;
@@ -256,7 +295,7 @@
 
 
 
-	/* LISTS */
+/*	LISTS	*/
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -278,7 +317,7 @@
 
 
 
-	/* QUOTES */
+/*	QUOTES	*/
 	blockquote {
 		margin-left: 0;
 		padding-left: 2rem;
@@ -290,7 +329,7 @@
 
 
 
-	/* TABLES */
+/*	TABLES	*/
 	table {
 		border-collapse: collapse;
 		   margin-top: 2em;
@@ -321,6 +360,8 @@
 
 
 
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
 
 	</style>
 	</head>
@@ -352,7 +393,7 @@
 			<h5>Lorem ipsum dolor sit amet consectetur adipisicing elit H5</h5>
 			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ipsa voluptatum deleniti voluptatem illum iste laborum eum dolores maiores esse inventore quas voluptates enim omnis odit iure perferendis ab. Nobis.</p>
 
-			<blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quibusdam ea eos voluptatibus quis quidem! Et eum tenetur odit, quae corrupti nobis quod labore earum? Modi amet temporibus cumque quae!</blockquote>
+			<blockquote>“Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quibusdam ea eos voluptatibus quis quidem! Et eum tenetur odit, quae corrupti nobis quod labore earum? Modi amet temporibus cumque quae!”</blockquote>
 
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugit sint maiores consequuntur dolore sunt commodi eius nesciunt voluptate iusto voluptas numquam quidem voluptates ullam error perspiciatis dolorem, velit veritatis?</p>
 
@@ -471,7 +512,6 @@
 
 			<h2>Typographie</h2>
 
-			<h1 class="Source	darkWarmGrey ">Source Sans Pro</h3>
 			<h1 class="PlexSans	darkWarmGrey ">IBM Plex Sans</h3>
 			<h1 class="PlexMono	darkWarmGrey ">IBM Plex Mono</h3>
 
@@ -482,7 +522,7 @@
 			</h1>
 
 			<p class="blue">H1 – H4 titles:
-			<br>line-height: 100% | 1em
+			<br>line-height: 100% | 1em
 			<br>color: Blue #1F5C99</p>
 
 			<h1><strong>H1</strong>
@@ -530,16 +570,16 @@
 			<h4>Interligne</h4>
 
 			<p>Body, P
-			<br>line-height: 133% | 1.3em</p>
+			<br>line-height: 133% | 1.3em</p>
 
 			<p>H1 – H4
-			<br>line-height: 100% | 1em</p>
+			<br>line-height: 100% | 1em</p>
 
 			<p>H5 – H6
-			<br>line-height: 133% | 1.33em</p>
+			<br>line-height: 133% | 1.33em</p>
 
 			<p>Small
-			<br>line-height: 150% | 1.5em</p>
+			<br>line-height: 150% | 1.5em</p>
 
 		</section><!-- #Documentation -->
 
@@ -560,12 +600,12 @@
 		   (960/16=60) */
 		width: 60rem;
 		margin:auto;
+		padding: 2rem;
 	}
 	       #Sample { width: 40rem; }
 	       #Colors { width: 40rem; }
 	#Documentation { width: 60rem; }
 
-	  .Source { font-family: 'Source Sans Pro', sans-serif; }
 	.PlexSans { font-family: 'IBM Plex Sans', sans-serif; }
 	.PlexMono { font-family: 'IBM Plex Mono', monospace; }
 
