@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Design Guide and Base CSS – Simple version</title>
+	<style type="text/css" media="screen">
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	TYPOGRAPHY	*/
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	FONTS	*/
+
+	@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');
+	/* @import statements need to be the _first_ items in a CSS file… */
+
+
+	/* body */
+	body { font-family: 'IBM Plex Sans', sans-serif; }
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	FONT SIZES	*/
+
+	/*	base default: 1rem = 16 pixels = 12pt = 96dpi */
+	html { font-size: 100%; }
+
+	body, p { font-size: 1.00rem; }	/* 16px | 12pt */
+
+	h1 { font-size: 3.00rem; }	/* 40px | 30pt */
+	h2 { font-size: 2.50rem; }	/* 40px | 30pt */
+	h3 { font-size: 1.75rem; }	/* 28px | 21pt */
+	h4 { font-size: 1.50rem; }	/* 24px | 18pt */
+	h5 { font-size: 1.25rem; }	/* 20px | 15pt */
+	h6 { font-size: 1.00rem; }	/* 16px | 12pt */
+
+	small, .small { font-size: 85%; }	/* 13.6px | 10.2pt */
+	/* standard default ~= 0.8em = ~13px = ~10pt */
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	FONT-STYLE	*/
+
+	h2 { font-style: italic; }
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	FONT WEIGHTS	*/
+
+	/* CSS Font Weights
+		100 (ultralight) – 900 (extrabold)
+		400 = normal
+		700 = bold
+	*/
+
+	h1, h2, h3, h4, h5, h6 { font-weight: 500; }
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	LINE HEIGHT	*/
+
+	/*	we're using _em_ for line height, 
+		so it's proportional to the _text size_ …	*/
+
+	body, p { line-height: 1.33em; }
+	
+	h1, h2, h3, h4 { line-height: 1em; }
+
+	.small { line-height: 1.5em;  }
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	LETTER-SPACING	*/
+
+	.small { letter-spacing: 0.025em; }
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	COLOR */
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	Blue
+		Hex:	#1F5C99
+		RGB:	31  92  153
+		HSB:	210°  80%  60%
+		CMYK:	93%  68%  13%  1%
+		Lab:	38  -2  -40
+	*/
+	.blue, .blue * { color: #1F5C99; }
+
+
+/*	COLOR	*/
+
+	body { }
+	h1, h2, h3, h4 { color: #1F5C99; }
+
+	a:link, a:visited, a:hover, a:active {
+		color: #1F5C99;
+	}
+
+
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	STYLING ELEMENTS	*/
+
+
+/*	LINKS	*/
+	a:link, a:visited, a:hover, a:active { }
+	a:link { }
+	a:visited { }
+	a:hover {
+		background-color: rgba(31, 92, 153, 0.10);
+	}
+	a:active { }
+
+
+
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+
+	</style>
+	</head>
+
+	<body>
+
+<!--	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-->
+<!--	DESIGN GUIDE DOCUMENTATION	-->
+
+		<section id="Documentation">
+
+			<h1>Design guide</h1>
+
+			<p>[Your logo here.]</p>
+
+			<h3>Typography: <strong>IBM Plex Sans</strong></h3>
+
+			<p><strong>Body, P</strong>
+				<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+			<p>font-size: HTML = 100% &mdash; by default: 12pt | 16px
+				<br>line-height: 1.5em | 18pt | 24px</p>
+
+			<p class="small"><strong>small</strong>
+				<br>font-size: 85% | 10.2pt	| 13.6px
+				<br>line-height: 1.5em;
+				<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			<p class="blue">H1 – H4 titles:
+				<br>line-height: 100% | 1em
+				<br>font-weight: 500
+				<br>color: #1F5C99 (Blue)</p>
+
+			<h1><strong>H1</strong>
+				<br>font-size: 36pt | 48px | 3rem
+			</h1>
+
+			<h2><strong>H2</strong>
+				<br>font-size: 30pt | 40px | 2.5rem
+				<br>font-style: italic
+			</h2>
+
+			<h3><strong>H3</strong>
+				<br>font-size: 21pt | 28px | 1.75rem
+			</h3>
+
+			<h4><strong>H4</strong>
+				<br>font-size: 18pt | 24px | 1.5rem
+			</h4>
+
+			<h5><strong>H5</strong>
+				<br>font-size: 15pt | 20px | 1.25rem
+				<br>font-weight: 500
+			</h5>
+
+			<h6><strong>H6</strong>
+				<br>font-size: 12pt | 16px | 1rem
+				<br>font-weight: 500
+			</h6>
+
+		</section><!-- #Documentation -->
+
+		<hr>
+
+
+		<section id="Colors">
+
+			<h4>Colors:</h4>
+
+			<div class="colorInfo blue">
+				<h4><span class="swatch">&nbsp;</span>Blue</h4>
+				<dl>
+					<dt>Hex</dt>	<dd>#1F5C99</dd>
+					<dt>RGB</dt>	<dd>rgb(31,92,153)</dd>
+					<dt>HSL</dt>	<dd>hsl(210, 80%, 60%)</dd>
+				</dl>
+			</div>
+
+		</section><!-- #Colors -->
+
+
+<!--	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-->
+<!--	SAMPLE ELEMENTS – for testing	-->
+
+		<section id="Sample">
+
+			<h1>Sample elements H1</h1>
+			<h2>Dolor sit amet H2</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus corporis odit neque iusto illum rem in. Quas nihil suscipit, voluptatum placeat delectus cum quisquam voluptas alias. Error repellendus earum perferendis?</p>
+			<h3>Consectetur adipisicing elit H3</h3>
+			<p>Lorem ipsum <a href="#">dolor sit amet consectetur adipisicing elit</a>. Hic sapiente dolorum porro, libero consectetur recusandae! Repellat velit vel quia dicta, dolores labore perspiciatis quod? Laboriosam eius quaerat nostrum libero possimus.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia blanditiis quos? Quis, optio? Dolorum, sunt nostrum aliquam sequi consequatur odio nesciunt cumque! Expedita, facere distinctio possimus repellendus suscipit repudiandae?</p>
+			<h4>Lorem ipsum dolor sit amet consectetur adipisicing H4</h4>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus veritatis omnis quas, quisquam accusamus aliquid consectetur aperiam ducimus perferendis veniam dolor vel quasi voluptas sint voluptatibus odit minima corporis officia!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cumque rem qui officiis explicabo cum sint rerum delectus, numquam dignissimos quisquam odio labore ea obcaecati nostrum saepe quis, tenetur corrupti.</p>
+			<h1>In culpa qui <b>officia</b> deserunt mollit anim id est <b>laborum</b> H1</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi placeat animi numquam, tempore maxime laudantium rerum neque asperiores non veniam molestias consectetur voluptatum id! Itaque accusamus eius laudantium culpa.</p>
+
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+				<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+				<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</li>
+				<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</li>
+			</ul>
+
+			<h5>Lorem ipsum dolor sit amet consectetur adipisicing elit H5</h5>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ipsa voluptatum deleniti voluptatem illum iste laborum eum dolores maiores esse inventore quas voluptates enim omnis odit iure perferendis ab. Nobis.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugit sint maiores consequuntur dolore sunt commodi eius nesciunt voluptate iusto voluptas numquam quidem voluptates ullam error perspiciatis dolorem, velit veritatis?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eligendi labore assumenda tempora enim est perferendis veniam maxime asperiores distinctio reiciendis aspernatur perspiciatis ex officia dolores? Nesciunt voluptas odio sint!</p>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis facilis expedita dolorem dolores consectetur! Qui velit pariatur similique. Ducimus officiis labore animi est reprehenderit cumque incidunt unde odio sequi aspernatur.</p>
+			<h6>Lorem ipsum dolor sit amet consectetur adipisicing elit H6</h6>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis facilis expedita dolorem dolores consectetur! Qui velit pariatur similique. Ducimus officiis labore animi est reprehenderit cumque incidunt unde odio sequi aspernatur.</p>
+
+		</section><!-- #Sample -->
+
+
+
+
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!--	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-->
+<!--	PAGE LAYOUT AND DESIGN FOR THIS DESIGN GUIDE DOCUMENT ONLY		-->
+
+<style>
+	body {
+		/* At a root font size of 16px
+		   a full 960px page = 60rem.
+		   (960/16=60) */
+		width: 60rem;
+		margin:auto;
+		padding: 2rem;
+	}
+
+	hr { border: none; border-top: 1px solid #7AA3CC; margin-top: 3rem; margin-bottom: 3rem; }
+	img { width: 100%; }
+
+	.colorInfo { }
+	
+	.colorInfo dl {
+		display: grid;
+		grid-auto-columns: 1fr;
+		grid-auto-flow: row;
+	}
+
+	.colorInfo dt {
+		grid-row: 1;
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	.colorInfo dt, .colorInfo dd {
+		margin: 0;
+	}
+
+	.colorInfo dt::after { content: ": "; }
+	.colorInfo dd { letter-spacing: 0.1em; }
+
+	.swatch { width: 2rem; height: 2rem; display: inline-block; vertical-align: bottom; margin-right: 1rem; }
+	.blue .swatch { background-color: #1F5C99; }
+
+</style>
