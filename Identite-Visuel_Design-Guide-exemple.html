@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Prenom Nomdefamille</title>
+	</head>
+
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+	<style media="screen">
+
+
+		/* Styles de base */
+
+		body { font-family: 'IBM Plex Sans', sans-serif; }
+
+
+		                h1 { font-weight: 100; }
+		           body, p { font-weight: 300; }
+		h2, h3, h4, h5, h6 { font-weight: 500; }
+
+
+		h3, h5, h6 { font-style: italic; }
+
+
+		h1 { font-size: 4rem } /* 48pt */
+		h2 { font-size: 2rem; } /* 24pt */
+		h3 { font-size: 1.25rem; } /* 15pt */
+		h4 { font-size: 1rem; } /* 12pt */
+		h5 { font-size: 0.9166666667rem } /* 11pt */
+		h6 { font-size: 0.8333333333rem } /* 10pt */
+
+		small { font-size: 0.8333333333rem } /* 10pt */
+
+
+		body, p, h4, h5, h6 { line-height: 150%; }
+		         h1, h2, h3 { line-height: 100%; }
+
+
+		body { background-color: #f2f1f0;}
+
+		               body, p { color: var(--couleurPrincipale); }
+		h1, h2, h3, h4, h5, h6 { color: var(--couleurSecondaire); }
+
+
+
+		/* Couleurs */
+		:root {
+			--couleurPrincipale: #3F4A54;
+			--couleurSecondaire: #405f7f;
+			--couleurAccent: #FF5700;
+		}
+
+
+
+
+		/* Styles supplementaires */
+		/* Styles particulieres personnelles */
+
+		.hiLite {
+			color: #FFF;
+			background-color: var(--couleurAccent);
+			white-space: nowrap;
+			line-height: 100%;
+				padding-top: 0.3em;
+			 padding-bottom: 0.3em;
+			   padding-left: 0.5em;
+			  padding-right: 0.5em;
+		}
+
+		hr {
+			border: none;
+			border-bottom: 1px solid #CCC;
+			margin: 4em;
+		}
+
+
+
+
+		/* Styles pour ce document */
+
+		.swatch {
+			clear: both;
+			margin-top: 2rem;
+		}
+		.swatch:after {
+			display: block;
+			clear: both;
+			width: 100%;
+			content: " ";
+		}
+		.swatch .colorName {
+			margin:0;
+			margin-bottom: 0.5em;
+		}
+		.swatch .colorBox {
+			width: 4rem;
+			height: 4rem;
+			background-color: #F1357A;
+			float: left;
+			border: 1px solid #FFF;
+		}
+		.swatch .colorValues {
+			padding-left: 1rem;
+			width: 20rem;
+			float: left;
+		}
+		.swatch .colorValues p:first-of-type {
+			margin-top: 0;
+		}
+
+		  .colorBox.primaire {	background-color: var(--couleurPrincipale); }
+		.colorBox.secondaire {	background-color: var(--couleurSecondaire); }
+		    .colorBox.accent {	background-color: var(--couleurAccent); }
+
+		body { width: 40rem; margin: auto; }
+
+	</style>
+
+	<body>
+
+		<h1>Prenom <br>Nomdefamille</h1>
+		<h2><span class="hiLite">Design & typography<span></h2>
+		<h3>Illustration, photography, programming</h3>
+		<h2>Design guide</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+		<hr>
+
+
+		<p>Typeface:</p>
+		<h3><span class="hiLite">IBM Plex Sans</span></h3>
+		<h1>H1
+			<br>font-size: 48pt | 4rem
+			<br>font-weight: 100
+			<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		</h1>
+		<h2>H2
+			<br>font-size: 24pt | 2rem
+			<br>font-weight: 500
+			<br>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		</h2>
+		<h3>H3
+			<br>font-size: 15pt | 1.25rem
+			<br>font-weight: 500
+			<br>font-style: italic
+			<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		</h3>
+		<h4>H4
+			<br>font-size: 12pt | 1.25rem
+			<br>font-weight: 500
+			<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</h4>
+		<p>P
+			<br>font-size: 12pt | 1rem
+			<br>font-weight: 300
+			<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		</p>
+		<p><small>small: font-size: 0.833…rem | 10pt</small></p>
+		<h5>H5
+			<br>font-size: 11pt | 0.91666…rem
+			<br>font-weight: 500
+			<br>font-style: italic
+			<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</h5>
+		<h6>H6
+			<br>font-size: 10pt | 0.8333…rem
+			<br>font-weight: 500
+			<br>font-style: italic
+			<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</h6>
+
+
+		<p><i>H1 – H3:</i> line-height: 100% | 1em</p>
+		<p><i>H4 – H6, P, body:</i> line-height: 150% | 1.5em</p>
+		<p><i>Titles:</i> color: Secondaire</p>
+		<p><i>Body:</i> color: Primaire</p>
+
+		<hr>
+
+
+		<p>Colors:</p>
+		<div class="swatch">
+			<h3 class="colorName">Couleur Principale “Donker Koud Grijs”</h3>
+			<div class="colorBox primaire">&nbsp;</div>
+			<div class="colorValues">
+				<p>#<b>3F4A54</b></p>
+				<p>rgb(<b>63, 74, 84</b>)</p>
+				<p>hsb(<b>210, 25%, 33%</b>)</p>
+				<p><i>var(--couleurPrincipale)</i></p>
+			</div>
+		</div>
+		<div class="swatch">
+			<h3 class="colorName">Couleur Secondaire “Petrol Blauw”</h3>
+			<div class="colorBox secondaire">&nbsp;</div>
+			<div class="colorValues">
+				<p>#<b>405F7F</b></p>
+				<p>rgb(<b>42, 63, 84</b>)</p>
+				<p>hsb(<b>210, 50%, 50%</b>)</p>
+				<p><i>var(--couleurSecondaire)</i></p>
+			</div>
+		</div>
+		<div class="swatch">
+			<h3 class="colorName">Couleur Accent “Oranje”</h3>
+			<div class="colorBox accent">&nbsp;</div>
+			<div class="colorValues">
+				<p>#<b>FF5700</b></p>
+				<p>rgb(<b>255, 87, 0</b>)</p>
+				<p>hsb(<b>20, 100%, 100%</b>)</p>
+				<p><i>var(--couleurAccent)</i></p>
+			</div>
+		</div>
+
+		<p><i>Background-color:</i> <b>#F2F1F0</b>; | <b>rgb(242, 241, 240)</b></p>
+		<p><i>Gris clare:</i> <b>#CCC</b>; | <b>rgb(204, 204, 204)</b></p>
+
+		<hr>
+
+		<p><small>©2019 Prenom Nomdefamille<small></p>
+
+	</body>
+</html>
